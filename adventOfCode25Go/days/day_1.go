@@ -61,30 +61,20 @@ func Part2() {
 			}
 
 			if dialPos > 99 {
-				fmt.Printf("* ")
 				totZeroVisted += int(math.Abs(float64(dialPos)) / 100)
 			}
 
 			if dialPos < 1 {
-				fmt.Printf("* ")
 				totZeroVisted += int(math.Abs(float64(dialPos))/100) + 1
 				if oldDialPos == 0 {
-					fmt.Printf("^")
 					totZeroVisted -= 1
 				}
 			}
 
-			fmt.Printf("%v: %v -> %v ", direction, magnitude, dialPos)
 			dialPos = (dialPos%100 + 100) % 100
 			oldDialPos = dialPos
-			fmt.Printf("[%v] {%v}\n", dialPos, totZeroVisted)
 		}
 	}
 
 	fmt.Printf("Part2 Ans: %v\n", totZeroVisted)
-}
-
-func main() {
-	Part1()
-	Part2()
 }
