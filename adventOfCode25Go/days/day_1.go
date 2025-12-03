@@ -1,29 +1,17 @@
-package main
+package days
 
 import (
 	"fmt"
 	"math"
-	"os"
 	"strconv"
 	"strings"
 )
 
-func ReadFile() string {
-	filePath := "../inputs/day_1.txt"
-	data, err := os.ReadFile(filePath)
-	if err != nil {
-		panic(err)
-	}
-
-	return string(data)
-}
-
-func Part1() {
-	inputData := ReadFile()
+func D1P1(inputFile string) {
 	dialPos := 50
 	totalZeroHits := 0
 
-	for line := range strings.SplitSeq(inputData, "\n") {
+	for line := range strings.SplitSeq(inputFile, "\n") {
 		if len(line) > 0 {
 			direction := line[:1]
 			magnitude, _ := strconv.Atoi(line[1:])
@@ -40,16 +28,15 @@ func Part1() {
 		}
 	}
 
-	fmt.Println("Par1 Ans: ", totalZeroHits)
+	fmt.Println("Day 1, Part 1: ", totalZeroHits)
 }
 
-func Part2() {
-	inputData := ReadFile()
+func D1P2(inputFile string) {
 	dialPos := 50
 	totZeroVisted := 0
 	oldDialPos := dialPos
 
-	for line := range strings.SplitSeq(inputData, "\n") {
+	for line := range strings.SplitSeq(inputFile, "\n") {
 		if len(line) > 0 {
 			direction := line[:1]
 			magnitude, _ := strconv.Atoi(line[1:])
@@ -76,5 +63,5 @@ func Part2() {
 		}
 	}
 
-	fmt.Printf("Part2 Ans: %v\n", totZeroVisted)
+	fmt.Println("Day 2, Part 2: ", totZeroVisted)
 }

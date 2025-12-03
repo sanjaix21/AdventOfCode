@@ -1,4 +1,4 @@
-package main
+package days
 
 import (
 	"fmt"
@@ -25,7 +25,7 @@ func D2P1(inputFile string) {
 		}
 	}
 
-	fmt.Println("Part1: ", totInvalidIdVal)
+	fmt.Println("Day 2, Part 2: ", totInvalidIdVal)
 }
 
 func D2P2(inputFile string) {
@@ -46,14 +46,6 @@ func D2P2(inputFile string) {
 				subString := idStr[:window]
 				repeats := strLen / window
 				if strings.Repeat(subString, repeats) == idStr {
-					fmt.Printf(
-						"SubsStr: %v (%v), len: %v, wind: %v, :[%v]\n",
-						subString,
-						repeats,
-						len(idStr),
-						window+1,
-						id,
-					)
 					totInvalidIdVal += id
 					break
 				}
@@ -61,5 +53,5 @@ func D2P2(inputFile string) {
 		}
 	}
 
-	fmt.Println("Part 2: ", totInvalidIdVal)
+	fmt.Println("Day 2, Part 2: ", totInvalidIdVal)
 }
