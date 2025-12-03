@@ -10,3 +10,14 @@ func ReadFile(inputFilePath string) string {
 
 	return string(data)
 }
+
+func ReverseStr(word string) string {
+	runes := []rune(word)
+	var reversed string
+
+	for i := len(runes) - 1; i >= 0; i-- {
+		reversed += string(runes[i])
+	}
+
+	return reversed
+}

@@ -1,7 +1,6 @@
 package main
 
 import (
-	"aoc25/utils"
 	"fmt"
 	"strconv"
 	"strings"
@@ -63,11 +62,4 @@ func D2P2(inputFile string) {
 	}
 
 	fmt.Println("Part 2: ", totInvalidIdVal)
-}
-
-func main() {
-	inputFile := strings.TrimSpace(utils.ReadFile("../inputs/day_2.txt"))
-
-	D2P1(inputFile)
-	D2P2(inputFile)
 }
