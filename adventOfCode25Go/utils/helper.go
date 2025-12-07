@@ -1,6 +1,9 @@
 package utils
 
-import "os"
+import (
+	"os"
+	"strings"
+)
 
 func ReadFile(inputFilePath string) string {
 	data, err := os.ReadFile(inputFilePath)
@@ -8,7 +11,9 @@ func ReadFile(inputFilePath string) string {
 		panic(err)
 	}
 
-	return string(data)
+	trimmed := strings.TrimSpace(string(data))
+
+	return trimmed
 }
 
 func ReverseString(word string) string {

@@ -40,7 +40,7 @@ func findLargestJolt(jolts []int, number, rem int, size int) {
 }
 
 func D3P1(inputFile string) {
-	totOutputJolate := 0
+	totOutputJoltage := 0
 	for bank := range strings.SplitSeq(inputFile, "\n") {
 		jolts := make([]int, 2)
 		for i := range len(bank) {
@@ -50,14 +50,14 @@ func D3P1(inputFile string) {
 		}
 
 		largestJoltInBank := formNumber(jolts)
-		totOutputJolate += largestJoltInBank
+		totOutputJoltage += largestJoltInBank
 	}
 
-	fmt.Println("Day 3, Part 1: ", totOutputJolate)
+	fmt.Println("Day 3, Part 1: ", totOutputJoltage)
 }
 
 func D3P2(inputFile string) {
-	totOutputJolate12Dig := 0
+	totOutputJoltage12Dig := 0
 
 	for bank := range strings.SplitSeq(inputFile, "\n") {
 		jolts := make([]int, 12)
@@ -70,8 +70,8 @@ func D3P2(inputFile string) {
 		}
 
 		largestJoltInBank := formNumber(jolts)
-		totOutputJolate12Dig += largestJoltInBank
+		totOutputJoltage12Dig += largestJoltInBank
 	}
 
-	fmt.Println("Day 3, Part 2: ", totOutputJolate12Dig)
+	fmt.Println("Day 3, Part 2: ", totOutputJoltage12Dig)
 }
